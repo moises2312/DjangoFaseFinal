@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PixelPlayer</title>
-    <h1>Holaa</h1>
 
 
     <!-- BLOQUE DE ESTILOS CSS COMPARTIDO POR TODAS LAS PAGINAS -->
@@ -24,6 +23,7 @@
 
     <!-- BLOQUE DE ESTILOS CSS PERSONALIZADOS PARA CADA PAGINA -->
     {% block stylesheet %}
+    <link type="text/css" rel="stylesheet" href="{% static 'core/css/registrarme.css' %}">
       
     {% endblock stylesheet %}
 
@@ -162,7 +162,7 @@
   </div>
 
   <!-- BLOQUE DE PIE DE PAGINA COMPARTIDO POR TODAS LAS PAGINAS -->
-  <footer class="menu-inferior pagelayout-3">
+  <footer class="container-footer" class="menu-inferior pagelayout-3">
       <div class="footer-content">
         <div class="footer-section about">
           <h1 class="logo-text">Nosotros</h1>
@@ -172,14 +172,6 @@
             <span><i class="fas fa-phone"></i>WhatsApp: (+56) 985764126</span>
             <span><i class="fas fa-envelope"></i> Gmail: PixelPlayer@gmail.com</span>
           </div>
-        </div>
-        <div class="footer-section links">
-          <h1>Enlaces</h1>
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
         </div>
         <div class="footer-section contact-form">
           <h1>Contacto</h1>
@@ -193,7 +185,6 @@
         <p>&copy; 2024. Todos los derechos reservados.</p>
       </div>
     <hr>
-    <a href="{% url 'poblar' %}" clas="btn btn-danger">POBLAR BASE DE DATOS CON REGISTROS PARA PRUEBAS</a>
   </footer>
 
   <!-- BLOQUE DE SCRIPTS COMPARTIDOS POR TODAS LAS PAGINAS -->

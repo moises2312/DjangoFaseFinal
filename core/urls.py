@@ -33,4 +33,6 @@ urlpatterns = [
     path('comprar_ahora', comprar_ahora, name='comprar_ahora'),
     path('premio', premio, name='premio'),
     path('poblar', poblar, name='poblar'),
+    path('eliminar_producto/<int:bodega_id>/', eliminar_producto_en_bodega, name='eliminar_producto_en_bodega'),
+
 ]

@@ -3,7 +3,7 @@
 {% load custom_filters %}
 
 {% block content %}
-    
+<div class="container-fluid">
     <h1> Carrito de compras </h1>
 
     <table id="tabla-principal" class="table table-hover">
@@ -86,5 +86,6 @@
         <a href="{% url 'vaciar_carrito' %}" class="btn btn-danger"> Vaciar carrito </a>
         <a href="#" class="btn btn-success"> Continuar al pago </a>
     </div>
+</div>
     
 {% endblock content %}

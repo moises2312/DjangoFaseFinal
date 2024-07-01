@@ -3,7 +3,7 @@
 {% load custom_filters %}
 
 {% block content %}
-
+<div class="container-fluid">
   <h1>Administración de productos</h1>
 
   <form id="form" method="POST" enctype="multipart/form-data" style="display:none"> 
@@ -37,7 +37,7 @@
     {{ form.imagen|as_bootstrap_field }}
 
     <!-- AREA DE BOTONES -->
-    <div class="mt-2 mb-3 text-center">
+    <div class="mt-2 text-center">
       <input class="btn btn-primary" type="submit" value="Guardar">
       <a class="btn btn-primary" href="{% url 'productos' 'crear' '0' %}"> Nuevo </a>
 
@@ -84,6 +84,7 @@
               <form method="POST" action="{% url 'productos' 'eliminar' producto.id %}">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger btn-sm"> Eliminar </button>
+                
               </form>
             </td>
           </tr>
@@ -91,7 +92,7 @@
       </tbody>
     </table>
   {% endif %}
-
+</div>
 {% endblock content %}
 
 {% block script %}

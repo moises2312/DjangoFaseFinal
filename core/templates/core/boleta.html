@@ -3,7 +3,7 @@
 {% load custom_filters %}
 
 {% block content %}
-
+<div class="container-fluid">
     {% if boleta %}
         <div class="row">
             <div class="col-6 text-right">
@@ -79,6 +79,7 @@
                 <p><strong>Total a Pagar:</strong> {{ boleta.total_a_pagar|formatear_dinero }}</p>
             </div>
         </div>
+    </div>
     {% else %}
         <h1>No se puede mostrar la boleta</h1>
     {% endif %}

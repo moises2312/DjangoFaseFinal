@@ -3,9 +3,12 @@
 {% load custom_filters %}
 
 {% block content %}
+
+<div class="container-fluid">
   <h1>Actualiza tus datos</h1>
-    
-  <form id="form" method="POST" enctype="multipart/form-data">
+
+  
+  <form  id="form" method="POST" enctype="multipart/form-data">
 
     {% csrf_token %}
 
@@ -41,6 +44,7 @@
     </div>
 
   </form>
+</div>
   <br><br><br>
 
 {% endblock content %}

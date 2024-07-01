@@ -10,7 +10,7 @@
         para ello se usa jquery y ajax.
         (VER COMENTARIO "COMBOBOX DEPENDIENTES PARA CATEGORIA Y PRODUCTO" en bodega.js)
     -->
-
+<div class="container-fluid">
     <form id="form" method="POST">
 
         {% csrf_token %}
@@ -36,7 +36,7 @@
             <tbody>
                 <!-- AREA DE FILAS DE PRODUCTOS -->
                 {% for producto in productos %}
-                    <tr>
+                    <tr class="mt-2 text-center">
                         <td>
                             <img src="/media/{{ producto.imagen }}" class="producto-sm" alt="">
                         </td>
@@ -54,7 +54,7 @@
                 {% endfor %}
             </tbody>
         </table>
-
+</div>
     {% endif %}
 {% endblock content %}
 
