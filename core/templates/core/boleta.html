@@ -57,7 +57,7 @@
                 </tr>
             </thead>
             <tbody>
-                {% for item in boleta.all %}
+                {% for item in detalle_boleta %}
                     <tr>
                         <td>{{ item.bodega.producto.categoria.nombre }}</td>
                         <td>{{ item.bodega.producto.nombre }}</td>
